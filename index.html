@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureNest - Your Digital Safe Haven</title>
+    <link rel="icon" href="../logo.png"/>
+    <style>
+        /* Base Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color:gray;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+        }
+
+        header .logo h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        header .logo p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #ddd;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            background-color: #444;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px;
+            background-color: gray;
+            min-height: 60vh;
+        }
+
+        .hero-content h2 {
+            font-size: 48px;
+            color:black;
+            margin-bottom: 20px;
+            font-weight: bold;
+
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: black;
+        }
+
+        .cta-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        .hero img {
+            max-width: 500px;
+            width: 100%;
+        }
+
+        /* About Section */
+        .about {
+            padding: 60px;
+            background-color: gray;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color:black;
+            font-weight: bold;
+            
+        }
+
+        .about p {
+            font-size: 18px;
+            color: black;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        hr.line {
+            border: 8px solid black;
+            border-radius: 5px;
+          }
+
+        /* Features Section */
+        .features {
+            padding: 60px;
+            background-color: gray;
+        }
+
+        .features h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: black;
+            font-weight: bold;
+        }
+
+        .feature-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .feature {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 30%;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .feature p {
+            font-size: 16px;
+            color:black;
+        }
+
+        /* File Dashboard */
+        .file-dashboard {
+            padding: 60px;
+            background-color: gray;
+        }
+
+        .file-dashboard h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 40px;
+            color:black;
+            font-weight: bold;
+        }
+
+        .file-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .file {
+            background-color: #fff;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: calc(33.333% - 40px);
+        }
+
+        .file p {
+            font-size: 16px;
+            margin: 0;
+            color: black;
+        }
+
+        .file a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .sort-options {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .sort-options select {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 60px;
+            background-color:gray;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: black;
+            font-weight: bolder;
+        }
+
+        .contact p {
+            font-size: 18px;
+            color: black;
+            margin-bottom: 40px;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            color:black;
+        }
+
+        .contact button {
+            padding: 15px 30px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px;
+            text-align: center;
+            background-color:black;
+            color: #fff;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer .social-links a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer .social-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+
+    <header>
+        <div class="logo">
+            <h1>SecureNest</h1>
+            <p>Your Digital Safe Haven</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.php">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Secure Your Files. Anytime, Anywhere.</h2>
+            <p>Upload, store, and share your important documents with complete privacy and control.</p>
+            <a href="signup.php" class="cta-button">Get Started</a>
+        </div>
+        <img src="fff.jpg" alt="Security Illustration">
+    </section>
+
+
+    <section class="about" id="about">
+        <h2>About SecureNest</h2>
+        <p>SecureNest is a file storage and sharing platform built with security at its core. Safeguard your digital assets with state-of-the-art encryption and seamless file sharing options.</p>
+    </section>
+
+    <hr class="line">
+
+    <section class="features" id="features">
+        <h2>Key Features</h2>
+        <div class="feature-container">
+            <div class="feature">
+                <h3>Advanced Encryption</h3>
+                <p>Your files are protected with military-grade AES-256 encryption, ensuring your data stays secure.</p>
+            </div>
+            <div class="feature">
+                <h3>QR Code Sharing</h3>
+                <p>Share your files effortlessly by generating QR codes for secure downloads.</p>
+            </div>
+            <div class="feature">
+                <h3>Cross-Platform Access</h3>
+                <p>Access your files from any device, anytime, with full control.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="file-dashboard">
+        <h2>Your Files</h2>
+        <div class="sort-options">
+            <select id="fileSort" onchange="sortFiles()">
+                <option value="all">All Files</option>
+                <option value="document">Documents</option>
+                <option value="video">Videos</option>
+                <option value="music">Music</option>
+            </select>
+        </div>
+        <div class="file-container">
+            <div class="file">
+                <p>File Name: example.pdf</p>
+                <p>Type: Document</p>
+                <p>Size: 1.2MB</p>
+                <a href="#">Download</a>
+            </div>
+            <div class="file">
+                <p>File Name: music.mp3</p>
+                <p>Type: Music</p>
+                <p>Size: 5MB</p>
+                <a href="#">Download</a>
+            </div>
+        </div>
+    </section>
+
+    <hr class="line">
+
+    <section class="contact" id="contact">
+        <h2>Get in Touch</h2>
+        <p>If you have any questions or need assistance, feel free to contact us!</p>
+        <form action="contact_form.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name">
+            <input type="email" name="email" placeholder="Your Email">
+            <textarea name="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 SecureNest. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://x.com/puttvoo">Twitter</a> |
+            <a href="https://www.instagram.com/puttvoo.24/?hl=en">Instagram</a> |
+            <a href="https://github.com/Puttvoo">GitHub</a>
+        </div>
+    </footer>
+
+</body>
+</html>
